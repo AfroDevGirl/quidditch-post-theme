@@ -1,0 +1,36 @@
+{{!< default}}
+
+<div class='main-body-width'>
+
+  <h1 class='article-title'>Staff</h1>
+  <div class='article-title-underline'></div>
+
+  <div class='flexbox'>
+    <div class='article'>
+    {{#get "users" limit="all" order="created_at asc"}}
+      <div class='article-body'>
+        {{#foreach users}}
+          <article class="article-spacer">
+            <header class="loop-header">
+              {{#if image}}
+              <div class="summary-image">
+                <img src="{{image}}" alt="{{name}}" />
+                <h6>Hi</h6>
+              </div>
+              {{/if}}
+              <h2 itemprop="headline"><a href="{{{url}}}">{{name}}</a></h2>
+              <p>{{location}}</p>
+              <p class="loop-content" itemprop="articleBody">
+                {{bio}}
+              </p>
+            </header>
+          </article>
+        {{/foreach}}
+      </div>
+    {{/get}}
+    </div>
+    {{> sidebar}}
+  </div>
+</div>
+
+{{> footer}}

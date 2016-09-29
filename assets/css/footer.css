@@ -1,0 +1,87 @@
+/***** footer *****/
+
+.footer {
+  width: 100%;
+  background-color: #000000;
+  padding: 30px 0px 40px 0px;
+  margin-top: 30px;
+}
+
+.footer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/***** social media links *****/
+
+.footer-social-links-title {
+  font-family: Alegreya, serif;
+  font-weight: 900;
+  font-size: 21px;
+  line-height: 21px;
+  word-spacing: 5px;
+  color: #FFFFFF;
+}
+
+.footer .social-links {
+  float: left;
+  clear: both;
+  margin-top: 7px;
+}
+
+/***** contribute button *****/
+
+.footer .contribute-button {
+  float: left;
+  clear: both;
+  width: 225px;
+  margin-top: 25px;
+  border-radius: 18px;
+  padding: 8px 0px;
+  font-size: 30px;
+  line-height: 30px;
+}
+
+/***** article links *****/
+
+.footer-links-title {
+  font-family: Alegreya, serif;
+  font-weight: 900;
+  font-size: 21px;
+  line-height: 21px;
+  word-spacing: 5px;
+  color: #FFFFFF;
+  margin-bottom: 12px;
+}
+
+.footer-links {
+  list-style-type: none;
+}
+
+.footer-links > li {
+  height: 14px;
+  margin-bottom: 12px;
+}
+
+.footer-links > li:last-child {
+  margin-bottom: 0px;
+}
+
+.footer-links a {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 14px;
+  color: #FFFFFF;
+}
+
+.footer-links a:hover {
+  color: #999999;
+}
+
+/***** logo *****/
+
+.footer-logo {
+  width: 125px;
+}

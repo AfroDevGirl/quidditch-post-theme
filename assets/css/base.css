@@ -1,0 +1,148 @@
+/***** color reference *****
+ * light green:   50A25F
+ * dark green:    2E6F3F
+ * blue:          44BCED
+ * dark blue:     287696
+ * v. light grey: F2F2F2
+ * light grey:    999999
+ * dark grey:     333333
+ */
+
+/***** resets *****/
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+	border: none;
+	width: 100%;
+}
+
+/***** custom fonts *****/
+
+@font-face {
+    font-family: 'league gothic';
+    src: url('../fonts/leaguegothic-regular.ttf');
+}
+
+/***** floating *****/
+
+.pull-left {
+	float: left;
+}
+
+.pull-right {
+	float: right;
+}
+
+.clear-both {
+  clear: both;
+}
+
+.clear-after:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/***** flexbox *****/
+
+.flexbox {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+
+.flexbox > * {
+  flex: 1;
+}
+
+/***** main body width *****/
+
+.main-body-width {
+  max-width: 960px;
+  margin: 0px auto;
+  overflow: hidden;
+}
+
+.main-body-width:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/***** node page *****/
+
+.node-page {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.node-page ul {
+    margin: 10px;
+    padding-left: 5%;
+    border-left: 2px solid black;
+}
+
+/***** user profile *****/
+
+.user-profile img {
+    width: inherit;
+}
+
+/***** Staff panes *****/
+
+.pane-staff .pane-content,
+.pane-staff-editors .pane-content {
+    margin: 10px;
+    padding-left: 5%;
+}
+
+/***** Pagination *****/
+.pagination-list {
+  list-style-type: none;
+  text-transform: uppercase;
+  margin-top: 12px;
+  margin-left: 50%;
+}
+
+.pagination-list:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.pagination-list li {
+  float: left;
+  margin-right: 4px;
+}
+
+.pagination-list li:last-child {
+  margin-right: 0px;
+}
+
+.pagination-list a {
+  display: block;
+  padding: 6px;
+  background-color: #000000;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+.pagination-list a:hover {
+  color: #999999;
+}

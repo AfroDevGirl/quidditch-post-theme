@@ -1,0 +1,26 @@
+@media only screen and (max-width: 868px) {
+  .features.flexbox {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 768px){
+  .header-controls > .social-links, .header-controls > .button-link.contribute-button {
+    display:none;
+  }
+}
+@media only screen and (max-width: 646px){
+  .flexbox {
+    flex-direction: column;
+  }
+  .footer-links, .footer-links-title, .footer-logo {
+    display: none;
+  }
+}
+@media only screen and (max-width: 425px){
+  .article-squares {
+    display: none;
+  }
+  .summary-image {
+    display: none;
+  }
+}

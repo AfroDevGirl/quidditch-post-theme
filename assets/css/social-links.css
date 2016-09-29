@@ -1,0 +1,26 @@
+.social-links {
+  list-style-type: none;
+}
+
+.social-links > li {
+  float: left;
+  margin-left: 4px;
+  width: 30px;
+  height: 30px;
+}
+
+.social-links > li:first-child {
+  margin-left: 0px;
+}
+
+.social-links a {
+  display: block;
+}
+
+.social-links a img {
+  -webkit-filter: brightness(100%);
+}
+
+.social-links a img:hover {
+  -webkit-filter: brightness(70%);
+}

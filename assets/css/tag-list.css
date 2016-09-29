@@ -1,0 +1,37 @@
+/***** tag list *****/
+
+.tag-list {
+  list-style-type: none;
+  text-transform: uppercase;
+  margin-top: 12px;
+}
+
+.tag-list:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.tag-list li {
+  float: left;
+  margin-right: 4px;
+}
+
+.tag-list li:last-child {
+  margin-right: 0px;
+}
+
+.tag-list a {
+  display: block;
+  padding: 6px;
+  background-color: #000000;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 9px;
+  line-height: 9px;
+  color: #FFFFFF;
+}
+
+.tag-list a:hover {
+  color: #999999;
+}

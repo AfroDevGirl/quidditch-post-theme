@@ -1,0 +1,35 @@
+{{!< default}}
+
+<div class='main-body-width'>
+	{{#author}}
+		<h1 class='article-title'>{{name}}</h1>
+    <div class='article-title-underline'></div>
+    <div class='article-credit'>
+      <p>{{bio}}</p>
+      <p>
+        <ul style="display:inline-block;">
+          {{#if twitter}}<li><a href='{{twitter_url}}'>
+            {{twitter}}
+          </a></li>{{/if}}
+          {{#if facebook}}<li><a href='{{facebook_url}}'>
+            Facebook
+          </a></li>{{/if}}
+        </ul>
+      </p>
+    </div>
+  {{/author}}
+
+  <div class='flexbox'>
+    <div class='article'>
+      <div class='article-body'>
+        {{> loop}}
+      </div>
+      {{#if pagination}}
+        {{{pagination}}}
+      {{/if}}
+    </div>
+    {{> sidebar}}
+  </div>
+</div>
+
+{{> footer}}

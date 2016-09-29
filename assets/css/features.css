@@ -1,0 +1,140 @@
+/***** feautures *****/
+
+.features {
+  margin: 30px -15px 0px -15px;
+}
+
+.features > .features-box {
+  margin: 0px 15px;
+}
+
+.features-sidebar {
+  flex: 0 0 300px;
+}
+
+/***** feautures box *****/
+
+.features-box {
+  position: relative;
+  background-color: #F2F2F2;
+  padding-bottom: 48px;
+}
+
+.features-box.no-footer {
+  padding-bottom: 0px;
+}
+
+.features-sidebar > .features-box {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+/***** header *****/
+
+.features-header {
+  color: #FFFFFF;
+  font-family: Alegreya, serif;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 24px;
+  word-spacing: 5px;
+  text-align: center;
+  padding: 14px;
+}
+
+.features-header.related {
+  background-color: #44BCED;
+}
+
+.features-header.latest {
+  background-color: #999999;
+}
+
+.features-header.podcasts {
+  background-color: #000000;
+}
+
+.features-header.featured {
+  background-color: #44BCED;
+}
+
+/***** body *****/
+
+.features-body {
+  list-style-type: none;
+}
+
+.features-body > li {
+  display: block;
+  color: #333333;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px 16px;
+}
+
+.features-body > li:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.features-body a:hover {
+  color: #999999;
+}
+
+/***** alternating stripe colors *****/
+
+.features-body.alternating > li:nth-child(even) {
+  background-color: #FFFFFF;
+}
+
+/***** feature with date *****/
+
+.feature-with-date > *:nth-child(1) {
+  float: left;
+}
+
+.feature-with-date > *:nth-child(2) {
+  float: right;
+  font-weight: 700;
+}
+
+.feature-with-date .featured {
+    width: 60%;
+}
+
+/***** feature with iamge *****/
+
+.feature-with-image {
+  display: block;
+  padding: 16px;
+}
+
+/***** footer *****/
+
+.features-footer {
+  position: absolute;
+  display: block;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  height: 20px;
+  background-color: #50A25F;
+  color: #FFFFFF;
+  font-family: 'league gothic', sans-serif;
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;
+  padding: 14px;
+}
+
+.features-footer:hover {
+  background-color: #2e6f3f;
+}
+
+.features-footer img {
+  float: right;
+  width: 12px;
+  height: 20px;
+}

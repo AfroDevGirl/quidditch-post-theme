@@ -1,0 +1,30 @@
+{{!< default}}
+
+<div class='main-body-width'>
+	{{#tag}}
+	  <h1 class='article-title'>{{name}}</h1>
+    <div class='article-title-underline'></div>
+  {{/tag}}
+    <div class='flexbox'>
+      <div class='article'>
+        {{#if image}}
+          <div class='article-photo leading-photo'>
+            <img src="{{image}}" alt="{{title}}"/>
+          </div>
+        {{/if}}
+
+        <div class='article-body'>
+          {{> loop}}
+        </div>
+    		{{#if pagination}}
+    		  {{{pagination}}}
+    		{{/if}}
+      </div>
+
+      {{> sidebar}}
+    </div>
+
+
+</div>
+
+{{> footer}}

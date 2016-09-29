@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {{! Document Settings }}
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatabile" content="IE=edge,chrome=1" />
+
+  {{! Page Meta }}
+  <title>{{meta_title}}</title>
+  <meta name="decription" content="{{meta_description}}" />
+
+  {{! Fonts}}
+  <link href='https://fonts.googleapis.com/css?family=Alegreya:900italic,900,700,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Merriweather:700,700italic,400,400italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+
+  {{! Styles}}
+  <link rel="stylesheet" type="text/css" href="{{asset "/css/article.css"}}">
+  <link rel="stylesheet" type="text/css" href="{{asset "/css/article-header.css"}}">
+  <link rel="stylesheet" type="text/css" href="{{asset "/css/article-squares.css"}}">
+  <link rel="stylesheet" type="text/css" href="{{asset "/css/base.css"}}">
+  <link rel="stylesheet" type="text/css" href="{{asset "/css/button-link.css"}}">
+  <link rel="stylesheet" type="text/css" href="{{asset "/css/comments.css"}}">
+  <link rel="stylesheet" type="text/css" href="{{asset "/css/features.css"}}">
+  <link rel="stylesheet" type="text/css" href="{{asset "/css/footer.css"}}">
+  <link rel="stylesheet" type="text/css" href="{{asset "/css/form.css"}}">
+  <link rel="stylesheet" type="text/css" href="{{asset "/css/header.css"}}">
+  <link rel="stylesheet" type="text/css" href="{{asset "/css/menu.css"}}">
+  <link rel="stylesheet" type="text/css" href="{{asset "/css/social-links.css"}}">
+  <link rel="stylesheet" type="text/css" href="{{asset "/css/tag-list.css"}}">
+  <link rel="stylesheet" type="text/css" href="{{asset "/css/media.css"}}">
+
+  {{! Scripts}}
+  <script type='text/javascript' src="{{asset "/js/jquery-1.12.4.min.js"}}"></script>
+  <script type='text/javascript' src="{{asset "/js/responsive_iframes.js"}}"></script>
+  <!-- <script type='text/javascript' src="{{asset "/js/custom-tag.js"}}"></script> -->
+  <script type='text/javascript' src="{{asset "/js/related-articles.js"}}"></script>
+  <script src="{{asset "js/jquery.ghostHunter.min.js"}}"></script>
+
+  {{! Responsive Meta Tags }}
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {{ghost_head}}
+</head>
+<body class="{{body_class}}">
+
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+  </script>
+
+  {{> header}}
+  <div class="main-body-width">
+  {{{body}}}
+  </div>
+
+  {{ghost_foot}}
+  <script language="javascript" type="text/javascript">
+    responsive_iframes();
+
+    $(window).on('load', function(){
+      relatedArticles(window.location.pathname);
+    });
+
+    $("#search-field").ghostHunter({
+      results: "#results",
+      includepages: true,
+    });
+
+  </script>
+</body>
+</html>

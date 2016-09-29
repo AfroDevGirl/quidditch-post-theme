@@ -1,0 +1,92 @@
+{{!< default}}
+
+<div class='main-body-width'>
+  {{#get "posts" limit=3}}
+  <div class='article-squares'>
+    {{#foreach posts}}
+      {{#if @first}}
+        <a class='article-square primary' href='{{{url}}}'>
+          <img src='{{image}}' alt='{{title}}'/>
+          <div class='text-wrapper'>
+            <div class='article-square primary title'>{{title}}</div>
+            <div class='article-square primary line'></div>
+            <div class='article-square primary credit'>{{author}}</div>
+          </div>
+        </a>
+      {{else}}
+        <a class='article-square secondary {{#if @last}}bottom{{else}}top{{/if}}' href='{{{url}}}'>
+          <img src='{{image}}' alt='{{title}}'/>
+          <div class='panel-wrapper'>
+            <div class='panel'></div>
+            <div class='text-wrapper'>
+              <div class='title'>{{title}}</div>
+              <div class='credit'>{{author}}</div>
+            </div>
+          </div>
+        </a>
+      {{/if}}
+    {{/foreach}}
+  </div>
+  {{/get}}
+</div>
+
+<div class='main-body-width'>
+  <div class='features flexbox'>
+    <div class='features-box'>
+      <div class='features-header latest'>LATEST FEATURES</div>
+
+      {{#get "posts" limit=6}}
+        <ul class='features-body'>
+          {{#foreach posts}}
+            <li><a href='{{url}}'>{{title}}</a></li>
+          {{/foreach}}
+        </ul>
+      {{/get}}
+
+      <a class='features-footer' href='/latest'>
+        MORE ARTICLES
+        <img src='/assets/images/QP_arrow.png'/>
+      </a>
+    </div>
+
+    <div class='features-box'>
+      <div class='features-header podcasts'>POPULAR TAGS</div>
+      {{#get 'tags' limit="all" include="count.posts" order="count.posts desc"}}
+        <ul class='features-body alternating' id="custom-tag-line">
+        {{#foreach tags limit="7"}}
+          <li><a class="feature-with-date" href="{{url}}">
+            <span>{{name}}</span>
+            <span>{{count.posts}} posts</span>
+          </a></li>
+        {{/foreach}}
+      </ul>
+      {{/get}}
+      <a class='features-footer' href='/latest'>
+        MORE ARTICLES
+        <img src='/assets/images/QP_arrow.png'/>
+      </a>
+    </div>
+
+    <div class='features-box'>
+      <div class='features-header featured'>FEATURED CONTENT</div>
+
+      {{#get "posts" limit="1" filter="featured:true"}}
+        {{#foreach posts}}
+          <div class='features-body'>
+            <a class='feature-with-image' href='{{url}}'>
+              <img src="{{image}}" alt="{{title}}">
+              <span style="text-align:center;">{{title}}</span>
+            </a>
+          </div>
+        {{/foreach}}
+
+        <a class='features-footer' href='{{url}}'>
+          READ MORE
+          <img src='/assets/images/QP_arrow.png'/>
+        </a>
+      {{/get}}
+    </div>
+  </div>
+</div>
+
+{{>footer}}

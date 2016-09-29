@@ -1,0 +1,59 @@
+<div class='features-sidebar'>
+  <div class='features-box no-footer'>
+    <div class='features-header related'>RELATED ARTICLES</div>
+
+    <ul class='features-body' id='related-articles-list'>
+
+    </ul>
+  </div>
+
+  <div class='features-box'>
+    <div class='features-header latest'>LATEST FEATURES</div>
+
+    {{#get "posts" limit=6}}
+      <ul class='features-body'>
+        {{#foreach posts}}
+          <li><a href='{{url}}'>{{title}}</a></li>
+        {{/foreach}}
+      </ul>
+    {{/get}}
+
+    <a class='features-footer' href='/features'>
+      MORE ARTICLES
+      <img src='/assets/images/QP_arrow.png'/>
+    </a>
+  </div>
+
+  <div class='features-box'>
+    <div class='features-header podcasts'>POPULAR TAGS</div>
+    {{#get 'tags' limit="all" include="count.posts" order="count.posts desc"}}
+      <ul class='features-body alternating' id="custom-tag-line">
+      {{#foreach tags limit="7"}}
+        <li><a class="feature-with-date" href="{{url}}">
+          <span>{{name}}</span>
+          <span>{{count.posts}} posts</span>
+        </a></li>
+      {{/foreach}}
+    </ul>
+    {{/get}}
+    <a class='features-footer' href='/latest'>
+      MORE ARTICLES
+      <img src='/assets/images/QP_arrow.png'/>
+    </a>
+  </div>
+
+  <div class='features-box'>
+    <div class='features-header featured'>FEATURED CONTENT</div>
+
+    {{#get "posts" limit="1" filter="featured:true"}}
+      {{#foreach posts}}
+        <div class='features-body'>
+          <a class='feature-with-image' href='{{url}}'>
+            <img src="{{image}}" alt="{{title}}">
+            <h4 style="text-align:center;">{{title}}</h4>
+          </a>
+        </div>
+      {{/foreach}}
+    {{/get}}
+  </div>
+</div>

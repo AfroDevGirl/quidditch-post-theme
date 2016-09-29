@@ -1,0 +1,50 @@
+/***** forms (not search-block-form) *****/
+
+:not(.menu-bar-search) > label {
+    display: inline-block;
+    color: white;
+    padding: 10px;
+    font-family: Alegreya, serif;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 5px 5px 0px 0px;
+    background: #50A25F;
+    border: 1px solid black;
+    font-weight: normal;
+}
+
+:not(.menu-bar-search) > input,
+:not(.menu-bar-search) > select,
+:not(.menu-bar-search) > textarea {
+    display: block;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 0px 5px 5px 5px;
+    background: white;
+    border: 1px solid black;
+}
+
+:not(.menu-bar-search) > input[type="submit"] {
+    display: inline-block;
+    border-radius: 5px;
+    margin: 5px;
+    background: #50A25F;
+    color: white;
+    font-family: Alegreya, serif;
+}
+
+fieldset {
+    border-top: 2px solid #50A25F;
+    border-bottom: 2px solid #50A25F;
+    padding-left: 5%;
+}
+
+/* Quick override of filter label */
+.filter-wrapper .form-item label {
+    display: inline-block;
+}
+
+/* Override required color to be colorblindness friendly */
+.form-required {
+    color: black;
+}

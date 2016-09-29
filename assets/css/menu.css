@@ -1,0 +1,83 @@
+/***** menu *****/
+
+.menu-bar {
+  width: 100%;
+  background-color: #000000;
+  margin-bottom: 16px;
+}
+
+.menu-bar:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/***** menu items *****/
+
+.menu-bar-items {
+  list-style-type: none;
+  text-transform: uppercase;
+}
+
+.menu-bar-items li {
+  float: left;
+  height: 36px;
+  font-family: 'league gothic', sans-serif;
+  font-size: 16px;
+  line-height: 36px;
+  color: #FFFFFF;
+  margin-left: 16px !important;
+}
+
+.menu-bar-items a:hover {
+  color: #999999;
+}
+
+/***** search box *****/
+
+.menu-bar-search {
+  width: 180px;
+  height: 20px;
+  float: right;
+  background-color: #999999;
+  padding: 8px 8px 8px 12px;
+}
+
+.menu-bar-search > a > img,
+.menu-bar-search > a > input[type="image"] {
+  width: 20px;
+  float: left;
+  border-bottom: unset;
+}
+
+.menu-bar-search > input {
+  width: 152px;
+  height: 20px;
+  float: right;
+  background-color: #999999;
+  outline: 0;
+  color: #FFFFFF;
+  border-bottom: 1px solid #FFFFFF;
+  font-size: 13px;
+  line-height: 13px;
+}
+
+.menu-bar-results {
+
+}
+
+/***** nice-menu overrides *****/
+
+ul.nice-menu,
+ul.nice-menu ul {
+    background: black;
+}
+
+ul.nice-menu .menuparent > a {
+    padding: 0;
+}
+
+ul.nice-menu:after {
+    content: unset;
+    display: unset;
+}

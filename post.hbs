@@ -1,0 +1,50 @@
+{{!< default}}
+
+<div class='main-body-width'>
+  {{#post}}
+    {{#if tags}}
+      <ul class='tag-list'>
+        {{#foreach tags}}
+          <li><a href='{{url}}' title="{{name}}">{{name}}</a></li>
+        {{/foreach}}
+      </ul>
+    {{/if}}
+    <h1 class='article-title'>{{title}}</h1>
+    <div class='article-title-underline'></div>
+    {{#author}}
+      <div class='article-credit'>
+        by
+        <a href='{{url}}'>{{name}}</a>
+        <time class="date_fbi" datetime="{{date format="YYY-MM-DD"}}" itemprop="datePublished">{{date format='dddd DD MMM YYYY'}}</time>
+      </div>
+    {{/author}}
+
+    <div class='flexbox'>
+      <div class='article'>
+        {{#if image}}
+          <div class='article-photo leading-photo'>
+            <img src="{{image}}" alt="{{title}}"/>
+          </div>
+        {{/if}}
+
+        <div class='article-body'>
+          {{content}}
+        </div>
+
+        <div class='comments'>
+          <h2>COMMENTS</h2>
+
+          <div class='comment-seperator'></div>
+
+          <div class="fb-comments" data-href="http://www.quidditchpost.com" data-numposts="5"></div>
+        </div>
+        {{#if pagination}}
+          {{{pagination}}}
+        {{/if}}
+      </div>
+      {{> sidebar}}
+    </div>
+  {{/post}}
+</div>
+
+{{> footer}}
