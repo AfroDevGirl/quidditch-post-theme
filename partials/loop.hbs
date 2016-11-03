@@ -1,16 +1,18 @@
 {{#foreach posts}}
 	<article class="article-spacer">
 		<header class="loop-header">
-      {{#if image}}
-      <div class="summary-image">
-        <img src="{{image}}" alt="{{title}}" />
-      </div>
-      {{/if}}
+		    {{#if image}}
+		      	<div class="summary-image">
+		        	<img src="{{image}}" alt="{{title}}" />
+		      	</div>
+	      	{{/if}}
 			<h2 itemprop="headline"><a href="{{{url}}}" rel="bookmark">{{title}}</a></h2>
+			
 			<time class="date" datetime="{{date format="YYY-MM-DD"}}" itemprop="datePublished">Posted on {{date format='dddd DD MMM YYYY'}}</time>
-      <p class="loop-content" itemprop="articleBody">
-        {{excerpt characters="140"}}...
-      </p>
+	      	
+	      	<p class="loop-content" itemprop="articleBody">
+	        	{{excerpt characters="140"}}...
+	      	</p>
 		</header>
 
 		{{#if tags}}

@@ -1,16 +1,18 @@
 {{!< default}}
 
 <div class='main-body-width'>
-  {{#get "posts" limit=3}}
+  {{#get "posts" limit=3 include="author"}}
   <div class='article-squares'>
     {{#foreach posts}}
       {{#if @first}}
         <a class='article-square primary' href='{{{url}}}'>
           <img src='{{image}}' alt='{{title}}'/>
-          <div class='text-wrapper'>
-            <div class='article-square primary title'>{{title}}</div>
-            <div class='article-square primary line'></div>
-            <div class='article-square primary credit'>{{author}}</div>
+          <div class='text-wrapper'>  
+            <div class='title'>{{title}}</div>
+            <div class='line'></div>
+            {{#author}}
+              <div class='credit'>by {{name}}</div>
+            {{/author}}
           </div>
         </a>
       {{else}}
@@ -20,7 +22,9 @@
             <div class='panel'></div>
             <div class='text-wrapper'>
               <div class='title'>{{title}}</div>
-              <div class='credit'>{{author}}</div>
+              {{#author}}
+                <div class='credit'>by {{name}}</div>
+              {{/author}}
             </div>
           </div>
         </a>

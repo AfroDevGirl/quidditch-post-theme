@@ -7,7 +7,7 @@
 
   <div class='flexbox'>
     <div class='article'>
-    {{#get "users" limit="all" order="created_at asc"}}
+    {{#get "users" limit="all" order="name asc"}}
       <div class='article-body'>
         {{#foreach users}}
           <article class="article-spacer">
@@ -15,7 +15,6 @@
               {{#if image}}
               <div class="summary-image">
                 <img src="{{image}}" alt="{{name}}" />
-                <h6>Hi</h6>
               </div>
               {{/if}}
               <h2 itemprop="headline"><a href="{{{url}}}">{{name}}</a></h2>

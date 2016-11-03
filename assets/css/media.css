@@ -4,14 +4,14 @@
   }
 }
 @media only screen and (max-width: 768px){
+  .flexbox {
+    flex-direction: column;
+  }
   .header-controls > .social-links, .header-controls > .button-link.contribute-button {
     display:none;
   }
 }
 @media only screen and (max-width: 646px){
-  .flexbox {
-    flex-direction: column;
-  }
   .footer-links, .footer-links-title, .footer-logo {
     display: none;
   }
