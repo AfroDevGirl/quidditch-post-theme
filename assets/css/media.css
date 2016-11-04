@@ -7,7 +7,7 @@
   .flexbox {
     flex-direction: column;
   }
-  .header-controls > .social-links, .header-controls > .button-link.contribute-button {
+  .header-controls > .social-links {
     display:none;
   }
 }

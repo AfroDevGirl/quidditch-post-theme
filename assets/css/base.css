@@ -64,7 +64,6 @@ img {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  overflow: hidden;
 }
 
 .flexbox > * {
@@ -74,7 +73,7 @@ img {
 /***** main body width *****/
 
 .main-body-width {
-  max-width: 95%;
+  max-width: 90%;
   margin: 0px auto;
   overflow: hidden;
 }

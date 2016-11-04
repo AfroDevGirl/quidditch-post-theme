@@ -64,6 +64,7 @@
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
   text-align: center;
+  z-index: 2;
 }
 
 .article-square.primary .title {
@@ -89,6 +90,16 @@
   font-weight: 700;
   font-size: 20px;
   margin-top: 16px;
+}
+.article-square.primary .panel{
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    background-color: #000000;
+    opacity: 0.4;
+    z-index: 1;
 }
 
 /***** secondary square *****/
