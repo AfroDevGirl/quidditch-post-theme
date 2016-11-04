@@ -76,19 +76,7 @@ var relatedArticles = function(url){
 	$.get(ghost.url.api('posts', {limit: "all",include: "tags,author"})).done(function(data){
     var allPosts = data.posts;
 
-    if(slug.indexOf("/tag/")) {
-      var tagged = slug.slice(5, -1);
-      allRelatedArticles = tagCheck(tagged, allPosts);
-    } else if(slug.indexOf("/author/")){
-      var author = slug.slice(8, -1);
-      for(var x = 0; x < allPosts.length; x++){
-        console.log(allPosts[x].author);
-        if(allPosts[x].author.slug === author){
-          tags = allPosts[x].tags;
-          allRelatedArticles = tagCheck(tags, allPosts);
-        }
-      }
-    } else {
+    if(slug.indexOf("/tag/") == -1) {
       var article = slug.slice(1, -1);
       for(var x = 0; x < allPosts.length; x++){
         if(allPosts[x].slug === article){
@@ -96,6 +84,9 @@ var relatedArticles = function(url){
           allRelatedArticles = tagCheck(tags, allPosts);
         }
       }
+    } else {
+      var tagged = slug.slice(5, -1);
+      allRelatedArticles = tagCheck(tagged, allPosts);
     }
 
 		related = generateRelated(allRelatedArticles);
