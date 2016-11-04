@@ -19,6 +19,8 @@
               {{/if}}
               <h2 itemprop="headline"><a href="{{{url}}}">{{name}}</a></h2>
               <p>{{location}}</p>
+              <p>{{#if twitter}}<a href="{{twitter_url}}">{{twitter}}</a>{{/if}}</p>
+              <p>{{#if facebook}}<a href="{{facebook_url}}">Follow me on Facebook</a>{{/if}}</p>
               <p class="loop-content" itemprop="articleBody">
                 {{bio}}
               </p>
