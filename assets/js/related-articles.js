@@ -92,7 +92,7 @@ var relatedArticles = function(url){
 		related = generateRelated(allRelatedArticles);
     console.log(related);
 		for(var i = 0; i < related.length; i++){
-			$("#related-articles-list").append('<li><a href="' + related[i].slug +'">' + related[i].title +'</a></li>');
+			$("#related-articles-list").append('<li><a href="/' + related[i].slug +'">' + related[i].title +'</a></li>');
 		}
 
   	}).fail(function(err){

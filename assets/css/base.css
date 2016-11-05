@@ -75,7 +75,6 @@ img {
 .main-body-width {
   max-width: 90%;
   margin: 0px auto;
-  overflow: hidden;
 }
 
 .main-body-width:after {
